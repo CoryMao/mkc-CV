@@ -1,0 +1,57 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{项目经历}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {深度学习研究项目}
+    {Deep Learning for Precipitation Nowcasting}
+    {}
+    {2026.02 - 至今}
+    {
+      \begin{cvitems}
+        \item {基于 NASADEM 为 SEVIR 数据集补充高程、坡度、坡向和海陆信息。}
+        \item {构建地理空间预处理流程，为短临降水预报模型中的多源数据融合打基础。}
+        \item {整理 terrain-aware auxiliary inputs，支持后续深度学习短临降水预报实验。}
+        \item {通过基于 Cross-Attention 和 FiLM 的 UNet 网络，在高程、雷达、红外等多源数据上进行融合，实现更加全面的临近降雨预测。}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {LLM 微调项目}
+    {Fine-tuning Qwen3-0.6B-Base on Nemotron-CC-Math}
+    {}
+    {2026.03 - 2026.05}
+    {
+      \begin{cvitems}
+        \item {在 Nemotron-CC-Math 上微调 Qwen3-0.6B-Base，用于数学领域适配。}
+        \item {设计数据清洗流程，全程仅使用正则表达式和 Qwen3 本身，不使用 teacher model、tool-calling、search 或外部工具。}
+        \item {关注轻量、可复现的数据过滤与 refinement 流程，支持 LLM 后训练实验。}
+        \item {通过针对 Weird Token 和 Critical Thinking 缺失问题设计 Reward 进行 GRPO，模型准确率从 baseline 的 40.2\% 提升至 56.1\%，验证了 2025 NeurIPS 满分论文 ``Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?'' 的核心思想。}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {图像分割项目}
+    {Intelligent Scissors Project}
+    {}
+    {2025.04 - 2025.05}
+    {
+      \begin{cvitems}
+        \item {实现交互式图像分割系统，结合 gradient-based edge detection 与 dynamic pathfinding。}
+        \item {使用 Sobel operators 计算方向梯度并构建 weighted graph，使图像边界越强的位置 edge cost 越低。}
+        \item {使用 Dijkstra's algorithm 在用户选点之间实时计算 optimal path，并加入 adaptive path stabilization 与 5-pixel 半径内的 cursor snapping。}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
